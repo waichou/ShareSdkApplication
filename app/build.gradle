@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'waichou'
+            keyPassword 'android'
+            storeFile file('D:/developer_tools/AS/android_studio_key.jks')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "login.share3"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+MobSDK {
+    appKey "2784000b19270"
+    appSecret "b2a08797052386497d4f6b7a07b7822a"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            SinaWeibo {
+                appKey "1416512007"
+                appSecret "139aa2de634f9ba831087d4e48c85b96"
+                callbackUri "http://www.sharesdk.cn"
+                shareByAppClient false
+            }
+            Wechat {
+                appId "wx2459032497b2f245"
+                appSecret "3558117513138feb519468d3a988aeb4"
+                BypassApproval true
+            }
+            QQ {
+                appId "1107202638"
+                appKey "mo2QhoPZqPZXqb74"
+                shareByAppClient true
+//                BypassApproval true
+            }
+            WechatMoments{
+                appId "wx2459032497b2f245"
+                appSecret "3558117513138feb519468d3a988aeb4"
+                BypassApproval false
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+}
