@@ -30,6 +30,9 @@ import cn.sharesdk.framework.PlatformActionListener;
  * 官方Demo:
  * https://github.com/MobClub/ShareSDK-for-Android
  *
+ * 关于新浪分享有个问题：
+ * 1.如果启用SSO方式授权
+ * 2.授权如果能再次提供切换账号的能力
  */
 public class SinaActivity extends AppCompatActivity implements PlatformActionListener {
 
