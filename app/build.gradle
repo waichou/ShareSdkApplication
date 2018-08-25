@@ -44,7 +44,7 @@ MobSDK {
                 appKey "1416512007"
                 appSecret "139aa2de634f9ba831087d4e48c85b96"
                 callbackUri "http://www.sharesdk.cn"
-                shareByAppClient false
+                shareByAppClient true
             }
             Wechat {
                 appId "wx2459032497b2f245"

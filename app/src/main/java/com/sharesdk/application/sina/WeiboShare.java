@@ -25,6 +25,10 @@ public class WeiboShare {
 
 	public void shareText(String text) {
 		Platform platform = ShareSDK.getPlatform(SinaWeibo.NAME);
+		platform.removeAccount(true);
+
+		//判断是否利用客户端分享不可用
+		boolean isClientValid = platform.isClientValid();
 		Platform.ShareParams shareParams = new Platform.ShareParams();
 		shareParams.setText(text);
 		if (!DemoUtils.isValidClientSina("com.sina.weibo")) {
