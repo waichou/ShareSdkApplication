@@ -22,18 +22,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:name">
-        <activity android:name=".QQActivity">
+        <activity android:name=".main.QQActivity">
 
         </activity>
-        <activity android:name=".WechatMomentsActivity"></activity>
-        <activity android:name=".WechatActivity">
+        <activity android:name=".main.WechatMomentsActivity"></activity>
+        <activity android:name=".main.WechatActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SinaActivity">
+        <activity android:name=".main.SinaActivity">
 
         </activity>
 

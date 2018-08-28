@@ -1,10 +1,11 @@
-package com.sharesdk.application;
+package com.sharesdk.application.main;
 
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.sharesdk.application.R;
 import com.sharesdk.application.sina.WeiboShare;
 import com.sharesdk.application.wechat.friends.WechatShare;
 

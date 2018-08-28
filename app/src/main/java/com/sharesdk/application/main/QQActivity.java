@@ -1,4 +1,4 @@
-package com.sharesdk.application;
+package com.sharesdk.application.main;
 
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.sharesdk.application.R;
 import com.sharesdk.application.tencent.qq.QQShare;
 
 import java.io.FileNotFoundException;
