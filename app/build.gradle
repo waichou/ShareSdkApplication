@@ -43,13 +43,13 @@ MobSDK {
             SinaWeibo {
                 appKey "1416512007"
                 appSecret "139aa2de634f9ba831087d4e48c85b96"
-                callbackUri "http://www.sharesdk.cn"
+                callbackUri "https://api.weibo.com/oauth2/default.html"
                 shareByAppClient true
             }
             Wechat {
                 appId "wx2459032497b2f245"
                 appSecret "3558117513138feb519468d3a988aeb4"
-                BypassApproval true
+                BypassApproval false
             }
             QQ {
                 appId "1107202638"
@@ -57,7 +57,7 @@ MobSDK {
                 shareByAppClient true
 //                BypassApproval true
             }
-            WechatMoments{
+            WechatMoments {
                 appId "wx2459032497b2f245"
                 appSecret "3558117513138feb519468d3a988aeb4"
                 BypassApproval false

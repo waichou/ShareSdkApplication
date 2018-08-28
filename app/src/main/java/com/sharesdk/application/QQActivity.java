@@ -4,6 +4,7 @@ import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.sharesdk.application.tencent.qq.QQShare;
 
@@ -70,17 +71,18 @@ public class QQActivity extends AppCompatActivity implements PlatformActionListe
 
     @Override
     public void onComplete(Platform platform, int i, HashMap<String, Object> hashMap) {
+        Toast.makeText(this, "success!", Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
     public void onError(Platform platform, int i, Throwable throwable) {
-
+        Toast.makeText(this, "error!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onCancel(Platform platform, int i) {
-
+        Toast.makeText(this, "cancel!", Toast.LENGTH_SHORT).show();
     }
 
     public void shareQQForImageClick(View view) {

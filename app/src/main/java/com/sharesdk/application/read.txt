@@ -1,0 +1,1 @@
+1. shareByAppClient true 这个参数如果配置在build.gradle,没有客户端的情况就网页登陆，有就客户端

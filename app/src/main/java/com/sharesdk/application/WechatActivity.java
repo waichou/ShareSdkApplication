@@ -4,10 +4,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 import com.sharesdk.application.wechat.friends.WechatShare;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
@@ -39,17 +42,17 @@ public class WechatActivity extends AppCompatActivity implements PlatformActionL
 
     @Override
     public void onComplete(Platform platform, int i, HashMap<String, Object> hashMap) {
-
+        Toast.makeText(this, "分享成功！", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onError(Platform platform, int i, Throwable throwable) {
-
+        Toast.makeText(this, "分享失败！", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onCancel(Platform platform, int i) {
-
+        Toast.makeText(this, "分享取消！", Toast.LENGTH_SHORT).show();
     }
 
     public void shareWechatForImgClick(View view) {
